@@ -1,0 +1,7 @@
+Z:\Programavimas\C# namu darbas\Scanner agent\Scanner App\bin\Debug\Scanner App.exe.config
+Z:\Programavimas\C# namu darbas\Scanner agent\Scanner App\bin\Debug\Scanner App.exe
+Z:\Programavimas\C# namu darbas\Scanner agent\Scanner App\bin\Debug\Scanner App.pdb
+Z:\Programavimas\C# namu darbas\Scanner agent\Scanner App\obj\Debug\Scanner App.csproj.AssemblyReference.cache
+Z:\Programavimas\C# namu darbas\Scanner agent\Scanner App\obj\Debug\Scanner App.csproj.CoreCompileInputs.cache
+Z:\Programavimas\C# namu darbas\Scanner agent\Scanner App\obj\Debug\Scanner App.exe
+Z:\Programavimas\C# namu darbas\Scanner agent\Scanner App\obj\Debug\Scanner App.pdb
