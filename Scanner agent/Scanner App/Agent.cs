@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Pipes;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -18,12 +20,14 @@ namespace Scanner_App
 
         public void FailuSiuntimas()
         {
-            foreach(Dictionary<string, int>Dazniai in SiuntimoEile.GetConsumingEnumerable())
+            var client = new NamedPipeClientStream(".", "dazniuSiuntimoVamzdis", PipeDirection.Out);
+            client.Connect();
+            var writer = new StreamWriter(client) { AutoFlush = true };
+            foreach (Dictionary<string, int>Dazniai in SiuntimoEile.GetConsumingEnumerable())
             {
-                foreach(KeyValuePair<string, int>zodzioDaznis in Dazniai)
-                {
-                    Console.WriteLine(zodzioDaznis.Key + " " + zodzioDaznis.Value);
-                }
+                string jsonDazniai = JsonConvert.SerializeObject(Dazniai);
+                Console.WriteLine(jsonDazniai);
+                writer.WriteLine(jsonDazniai);
             }
         }
 
@@ -52,7 +56,6 @@ namespace Scanner_App
             Task siuntimoTask = Task.Run(() => FailuSiuntimas());
             Task skaitymoTask = Task.Run(() => FailuSkaitymas());
             Task.WaitAll(siuntimoTask, skaitymoTask);
-            //while (true) { };
         }
     }
 }

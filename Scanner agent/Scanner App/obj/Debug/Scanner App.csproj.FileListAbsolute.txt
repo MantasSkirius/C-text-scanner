@@ -12,3 +12,7 @@ D:\AAA PROGRAMAVIMAS\C# namu darbas\Scanner agent\Scanner App\obj\Debug\Scanner 
 D:\AAA PROGRAMAVIMAS\C# namu darbas\Scanner agent\Scanner App\obj\Debug\Scanner App.csproj.CoreCompileInputs.cache
 D:\AAA PROGRAMAVIMAS\C# namu darbas\Scanner agent\Scanner App\obj\Debug\Scanner App.exe
 D:\AAA PROGRAMAVIMAS\C# namu darbas\Scanner agent\Scanner App\obj\Debug\Scanner App.pdb
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Scanner agent\Scanner App\obj\Debug\Scanner App.exe.config
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Scanner agent\Scanner App\bin\Debug\Newtonsoft.Json.dll
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Scanner agent\Scanner App\bin\Debug\Newtonsoft.Json.xml
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Scanner agent\Scanner App\obj\Debug\Scanner .3BE8FD13.Up2Date
