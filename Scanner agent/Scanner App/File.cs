@@ -18,6 +18,7 @@ namespace Scanner_App
         {
             string teksto_stringas = File.ReadAllText(failo_kelias);
             string[] zodziai = Tokenizatorius.Tokenizuoti(teksto_stringas);
+            Console.WriteLine("Dabar skaitomas failas: " + failo_kelias);
             Dictionary<string, int> Zodziu_daznis = new Dictionary<string, int>();
             foreach (string zodis in zodziai)
             {

@@ -23,34 +23,36 @@ namespace Scanner_App
                 foreach(KeyValuePair<string, int>zodzioDaznis in Dazniai)
                 {
                     Console.WriteLine(zodzioDaznis.Key + " " + zodzioDaznis.Value);
-                    Thread.Sleep(10);
                 }
             }
-            for (int i = 0; i < 20; i++)
+        }
+
+        public void FailuSkaitymas()
+        {
+            foreach (Failas failas in Failai)
             {
-                Console.WriteLine("NEW FILE");
+                SiuntimoEile.Add(failas.SkaiciuotiZodzius());
             }
+            SiuntimoEile.CompleteAdding();
         }
         public Agentas(string katalogo_kelias, string search_pattern) {
             SiuntimoEile = new BlockingCollection<Dictionary<string, int>>();
             Failai = new List<Failas>();
-            Task siuntimoTask = Task.Run(() => FailuSiuntimas());
+
             Console.WriteLine(katalogo_kelias);
             Console.WriteLine(search_pattern);
+
             string[] imagePaths = Directory.GetFiles(katalogo_kelias, search_pattern, SearchOption.AllDirectories);
             foreach (string imagePath in imagePaths)
             {
                 Failai.Add(new Failas(imagePath));
                 Console.WriteLine(imagePath);
             }
-            foreach (Failas failas in Failai)
-            {
-                SiuntimoEile.Add(failas.SkaiciuotiZodzius());
-                Thread.Sleep(3000);
-            }
-            SiuntimoEile.CompleteAdding();
-            Task.WaitAll(siuntimoTask);
-            while (true) { };
+
+            Task siuntimoTask = Task.Run(() => FailuSiuntimas());
+            Task skaitymoTask = Task.Run(() => FailuSkaitymas());
+            Task.WaitAll(siuntimoTask, skaitymoTask);
+            //while (true) { };
         }
     }
 }
