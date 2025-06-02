@@ -1,0 +1,29 @@
+In logic, mathematics, computer science, and linguistics, a formal language is a set of strings whose symbols are taken from a set called "alphabet".
+
+The alphabet of a formal language consists of symbols that concatenate into strings (also called "words").[1] Words that belong to a particular formal language are sometimes called well-formed words. A formal language is often defined by means of a formal grammar such as a regular grammar or context-free grammar.
+
+In computer science, formal languages are used, among others, as the basis for defining the grammar of programming languages and formalized versions of subsets of natural languages, in which the words of the language represent concepts that are associated with meanings or semantics. In computational complexity theory, decision problems are typically defined as formal languages, and complexity classes are defined as the sets of the formal languages that can be parsed by machines with limited computational power. In logic and the foundations of mathematics, formal languages are used to represent the syntax of axiomatic systems, and mathematical formalism is the philosophy that all of mathematics can be reduced to the syntactic manipulation of formal languages in this way.
+
+The field of formal language theory studies primarily the purely syntactic aspects of such languages—that is, their internal structural patterns. Formal language theory sprang out of linguistics, as a way of understanding the syntactic regularities of natural languages.
+History
+[icon]	
+This section needs expansion. You can help by adding to it. (March 2021)
+
+In the 17th century, Gottfried Leibniz imagined and described the characteristica universalis, a universal and formal language which utilised pictographs. Later, Carl Friedrich Gauss investigated the problem of Gauss codes.[2]
+
+Gottlob Frege attempted to realize Leibniz's ideas, through a notational system first outlined in Begriffsschrift (1879) and more fully developed in his 2-volume Grundgesetze der Arithmetik (1893/1903).[3] This described a "formal language of pure language."[4]
+
+In the first half of the 20th century, several developments were made with relevance to formal languages. Axel Thue published four papers relating to words and language between 1906 and 1914. The last of these introduced what Emil Post later termed 'Thue Systems', and gave an early example of an undecidable problem.[5] Post would later use this paper as the basis for a 1947 proof "that the word problem for semigroups was recursively insoluble",[6] and later devised the canonical system for the creation of formal languages.
+
+In 1907, Leonardo Torres Quevedo introduced a formal language for the description of mechanical drawings (mechanical devices), in Vienna. He published "Sobre un sistema de notaciones y símbolos destinados a facilitar la descripción de las máquinas" ("On a system of notations and symbols intended to facilitate the description of machines").[7] Heinz Zemanek rated it as an equivalent to a programming language for the numerical control of machine tools.[8]
+
+Noam Chomsky devised an abstract representation of formal and natural languages, known as the Chomsky hierarchy.[9] In 1959 John Backus developed the Backus-Naur form to describe the syntax of a high level programming language, following his work in the creation of FORTRAN.[10] Peter Naur was the secretary/editor for the ALGOL60 Report in which he used Backus–Naur form to describe the Formal part of ALGOL60.
+Words over an alphabet
+Main article: Alphabet (formal languages)
+
+An alphabet, in the context of formal languages, can be any set; its elements are called letters. An alphabet may contain an infinite number of elements;[note 1] however, most definitions in formal language theory specify alphabets with a finite number of elements, and many results apply only to them. It often makes sense to use an alphabet in the usual sense of the word, or more generally any finite character encoding such as ASCII or Unicode.
+
+A word over an alphabet can be any finite sequence (i.e., string) of letters. The set of all words over an alphabet Σ is usually denoted by Σ* (using the Kleene star). The length of a word is the number of letters it is composed of. For any alphabet, there is only one word of length 0, the empty word, which is often denoted by e, ε, λ or even Λ. By concatenation one can combine two words to form a new word, whose length is the sum of the lengths of the original words. The result of concatenating a word with the empty word is the original word.
+
+In some applications, especially in logic, the alphabet is also known as the vocabulary and words are known as formulas or sentences; this breaks the letter/word metaphor and replaces it by a word/sentence metaphor.
+Definition
