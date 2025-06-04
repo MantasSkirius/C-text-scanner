@@ -1,0 +1,20 @@
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\bin\Debug\net8.0-windows\Receiver master GUI.exe
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\bin\Debug\net8.0-windows\Receiver master GUI.deps.json
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\bin\Debug\net8.0-windows\Receiver master GUI.runtimeconfig.json
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\bin\Debug\net8.0-windows\Receiver master GUI.dll
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\bin\Debug\net8.0-windows\Receiver master GUI.pdb
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver_master_GUI.Form1.resources
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver master GUI.csproj.GenerateResource.cache
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver master GUI.GeneratedMSBuildEditorConfig.editorconfig
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver master GUI.AssemblyInfoInputs.cache
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver master GUI.AssemblyInfo.cs
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver master GUI.csproj.CoreCompileInputs.cache
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver master GUI.sourcelink.json
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver master GUI.dll
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\refint\Receiver master GUI.dll
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver master GUI.pdb
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver master GUI.genruntimeconfig.cache
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\ref\Receiver master GUI.dll
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver master GUI.csproj.AssemblyReference.cache
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\AAA PROGRAMAVIMAS\C# namu darbas\Receiver master with GUI\Receiver master GUI\Receiver master GUI\obj\Debug\net8.0-windows\Receiver.AF9E2AFD.Up2Date

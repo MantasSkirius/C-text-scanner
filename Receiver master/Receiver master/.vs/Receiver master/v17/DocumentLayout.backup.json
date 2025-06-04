@@ -9,6 +9,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{3F4914A3-78C2-4B9F-90A1-110FF4EE2828}|Receiver master.csproj|d:\\aaa programavimas\\c# namu darbas\\receiver master\\receiver master\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F4914A3-78C2-4B9F-90A1-110FF4EE2828}|Receiver master.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F4914A3-78C2-4B9F-90A1-110FF4EE2828}|Receiver master.csproj|d:\\aaa programavimas\\c# namu darbas\\receiver master\\receiver master\\receiver master.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{3F4914A3-78C2-4B9F-90A1-110FF4EE2828}|Receiver master.csproj|solutionrelative:receiver master.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +22,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Receiver master",
+              "DocumentMoniker": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master\\Receiver master\\Receiver master.csproj",
+              "RelativeDocumentMoniker": "Receiver master.csproj",
+              "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master\\Receiver master\\Receiver master.csproj",
+              "RelativeToolTip": "Receiver master.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-02T18:01:14.524Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,7 +44,7 @@
               "RelativeDocumentMoniker": "Receiver.cs",
               "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master\\Receiver master\\Receiver.cs",
               "RelativeToolTip": "Receiver.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T14:28:42.683Z",
               "EditorCaption": ""

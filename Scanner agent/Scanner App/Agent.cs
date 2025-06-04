@@ -29,6 +29,7 @@ namespace Scanner_App
                 Console.WriteLine(jsonDazniai);
                 writer.WriteLine(jsonDazniai);
             }
+            while(true){ }
         }
 
         public void FailuSkaitymas()
@@ -45,14 +46,23 @@ namespace Scanner_App
 
             Console.WriteLine(katalogo_kelias);
             Console.WriteLine(search_pattern);
-
-            string[] imagePaths = Directory.GetFiles(katalogo_kelias, search_pattern, SearchOption.AllDirectories);
-            foreach (string imagePath in imagePaths)
+            string[] filePaths;
+            try {
+                filePaths = Directory.GetFiles(katalogo_kelias, search_pattern, SearchOption.AllDirectories);
+            }
+            catch
+            {
+                Console.WriteLine("Katalogas nerastas arba netinkamas kelias.");
+                while (true) { }
+            }
+            
+            
+            foreach (string imagePath in filePaths)
             {
                 Failai.Add(new Failas(imagePath));
                 Console.WriteLine(imagePath);
             }
-
+            
             Task siuntimoTask = Task.Run(() => FailuSiuntimas());
             Task skaitymoTask = Task.Run(() => FailuSkaitymas());
             Task.WaitAll(siuntimoTask, skaitymoTask);
