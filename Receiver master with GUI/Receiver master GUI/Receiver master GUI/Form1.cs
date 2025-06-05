@@ -44,9 +44,10 @@ namespace Receiver_master_GUI
                     ProcessStartInfo startInfo = new ProcessStartInfo()
                     {
                         FileName = agentoProgramosKelias,
-                        //Arguments = katalogoKelias,
+                        Arguments = $"\"{katalogoKelias}\"",//Šito reikia, kad kelias nebūtų suskaldytas į kelis string[] elementus, jei yra tarpų
                         UseShellExecute = false
                     };
+                    MessageBox.Show("Pradetas procesas su keliu: " + startInfo.Arguments);
                     using (Process process = Process.Start(startInfo))
                     {
                         //process.WaitForExit();

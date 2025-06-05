@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D36F55B2-CA1D-4764-B868-073E2E895331}|Scanner App.csproj|D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D36F55B2-CA1D-4764-B868-073E2E895331}|Scanner App.csproj|solutionrelative:agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D36F55B2-CA1D-4764-B868-073E2E895331}|Scanner App.csproj|D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36F55B2-CA1D-4764-B868-073E2E895331}|Scanner App.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D36F55B2-CA1D-4764-B868-073E2E895331}|Scanner App.csproj|d:\\aaa programavimas\\c# namu darbas\\scanner agent\\scanner app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D36F55B2-CA1D-4764-B868-073E2E895331}|Scanner App.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D36F55B2-CA1D-4764-B868-073E2E895331}|Scanner App.csproj|d:\\aaa programavimas\\c# namu darbas\\scanner agent\\scanner app\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36F55B2-CA1D-4764-B868-073E2E895331}|Scanner App.csproj|solutionrelative:agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D36F55B2-CA1D-4764-B868-073E2E895331}|Scanner App.csproj|D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,34 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T14:15:43.25Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Agent.cs",
               "DocumentMoniker": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\Agent.cs",
               "RelativeDocumentMoniker": "Agent.cs",
               "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\Agent.cs",
               "RelativeToolTip": "Agent.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAnwDcAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T14:15:43.248Z",
               "EditorCaption": ""

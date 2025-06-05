@@ -29,7 +29,6 @@ namespace Scanner_App
                 Console.WriteLine(jsonDazniai);
                 writer.WriteLine(jsonDazniai);
             }
-            while(true){ }
         }
 
         public void FailuSkaitymas()
@@ -53,6 +52,7 @@ namespace Scanner_App
             catch
             {
                 Console.WriteLine("Katalogas nerastas arba netinkamas kelias.");
+                Console.WriteLine("Katalogo kelias: " + katalogo_kelias);
                 while (true) { }
             }
             
