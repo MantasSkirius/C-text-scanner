@@ -26,7 +26,7 @@ namespace Receiver_master_GUI
             Task atnaujintiTextbox = Task.Run(() => update_textbox_contents());
             DictionaryJoiner DictionaryJoiner = new DictionaryJoiner();
             Task jungtiDictionaries = Task.Run(() => DictionaryJoiner.IjungtiDictionaryJoiner(PriiemimoEile, AtnaujinimoEile));
-        } 
+        }
 
         private void GetInputFromPipe(string PipeName)
         {
@@ -38,24 +38,24 @@ namespace Receiver_master_GUI
         {
 
         }
-        
+
         private void update_textbox_contents()
         {
             foreach (Dictionary<string, int> Dazniai in AtnaujinimoEile.GetConsumingEnumerable())
             {
                 string NaujasTekstas = "";
                 ;
-                foreach(KeyValuePair<string, int> daznis in Dazniai)
+                foreach (KeyValuePair<string, int> daznis in Dazniai)
                 {
                     NaujasTekstas += (daznis.Value + " " + daznis.Key + Environment.NewLine);
                 }
                 //Invoke paleidžia metodą ne per šį thread, o per UI threadą (pagrindinį)
-                textBox1.Invoke((MethodInvoker)delegate {
+                textBox1.Invoke((MethodInvoker)delegate
+                {
                     textBox1.Text = NaujasTekstas;
                 });
             }
         }
-
         private void callScannerProcess(int coreNumber, string katalogoKelias, string PipeName)
         {
             string coreNumberString = coreNumber.ToString();//int reikia paversti į string, kad būtų galima siūsti per proceso argumentus
@@ -71,20 +71,32 @@ namespace Receiver_master_GUI
             Task getInputFromPipe = Task.Run(() => GetInputFromPipe(PipeName));
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void folderDialog_and_AgentCreation()
         {
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
                 folderDialog.Description = "Pasirinkite kataloga, iš kurio bus skanuojami .txt failai: ";
                 if (folderDialog.ShowDialog(this) == DialogResult.OK)
                 {
-                    button1.Enabled = false;//išjungiu mygtuką, kad vartotojas vėl nespaustų
+                   
                     MessageBox.Show("Pasirinktas katalogas: " + folderDialog.SelectedPath);
                     MessageBox.Show("Agento programos kelias: " + agentoProgramosKelias);
-                    callScannerProcess(ScannerCoreNumber, folderDialog.SelectedPath, ("dazniuSiuntimoVamzdis"+ScannerCoreNumber));
+                    callScannerProcess(ScannerCoreNumber, folderDialog.SelectedPath, ("dazniuSiuntimoVamzdis" + ScannerCoreNumber));
                     ScannerCoreNumber++;
                 }
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            button1.Enabled = false;//išjungiu mygtuką, kad vartotojas vėl nespaustų
+            folderDialog_and_AgentCreation();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button2.Enabled = false;//išjungiu mygtuką, kad vartotojas vėl nespaustų
+            folderDialog_and_AgentCreation();
         }
     }
 }
