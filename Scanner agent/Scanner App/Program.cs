@@ -10,25 +10,29 @@ namespace Scanner_App
     internal class Program
     {
 
-        public static void Main(string[] Katalogo_keliai)
+        public static void Main(string[] argumentai)
         {
+            //Argumentu formatas:  $"\"{katalogoKelias}\" {coreNumberString} \"{PipeName}\
             //Šitos dalies su Katalogo kelių masyvu reikia, nes kompiliatorius tikisi matyti string[] Main metodo argumentuose.
-            string Katalogo_kelias = null;
-            if (Katalogo_keliai.Length == 0 || Katalogo_keliai == null)
+            string Katalogo_kelias = @"..\..\..\..\..\..\Tekstai skaitymui";
+            int ScannerCoreNumber = 2;
+            string search_pattern = "*.txt";
+            string PipeName = "dazniuSiuntimoVamzdis2";
+            if (argumentai.Length == 3 && argumentai != null)
             {
-                Console.WriteLine("Katalogo kelias nenurodytas, naudojamas numatytasis katalogas.");
-                //Katalogo_kelias = @"..\..\..\..\..\..\Tekstai skaitymui";
+                Katalogo_kelias = argumentai[0];
+                ScannerCoreNumber = int.Parse(argumentai[1]);
+                PipeName = argumentai[2];
+                Console.WriteLine("Atsiūsta informacija: " + ScannerCoreNumber + " " + Katalogo_kelias + " " + PipeName);
             }
             else
             {
-                Console.WriteLine("Katalogo kelias nurodytas: " + Katalogo_keliai[0]);
-                Katalogo_kelias = Katalogo_keliai[0];
+                Console.WriteLine("Katalogo kelias nenurodytas, naudojamas numatytasis katalogas.");
             }
-            foreach (string katalogo_kels in Katalogo_keliai)
+            foreach (string katalogo_kels in argumentai)
             {
                 Console.WriteLine("Argumentu spausdinimas: " + katalogo_kels);
             }
-            string search_pattern = "*.txt";
             Console.WriteLine(Katalogo_kelias);
             Console.WriteLine("Katalogo kelias su kuriuo kuriamas agentas: " + Katalogo_kelias);
             Agentas agent = new Agentas(Katalogo_kelias, search_pattern);

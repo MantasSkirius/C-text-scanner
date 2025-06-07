@@ -30,9 +30,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAB5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T14:15:43.25Z",
               "EditorCaption": ""
@@ -45,9 +45,10 @@
               "RelativeDocumentMoniker": "Agent.cs",
               "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Scanner agent\\Scanner App\\Agent.cs",
               "RelativeToolTip": "Agent.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T14:15:43.248Z"
+              "WhenOpened": "2025-06-02T14:15:43.248Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
