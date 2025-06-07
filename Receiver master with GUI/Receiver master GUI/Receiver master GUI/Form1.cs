@@ -1,29 +1,42 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Concurrent;
+using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace Receiver_master_GUI
 {
     public partial class Form1 : Form
     {
+        private BlockingCollection<Dictionary<string, int>> PriiemimoEile;
         public Form1()
         {
-            //D:\AAA PROGRAMAVIMAS\C# namu darbas\Scanner agent\Scanner App\bin\Debug\Scanner App.exe
-            
+            PriiemimoEile = new BlockingCollection<Dictionary<string, int>>();
             InitializeComponent();
+            Task atnaujintiTextbox = Task.Run(() => update_textbox_contents());
         }
 
         private void GetInputFromPipe()
         {
-            Receiver receiver = new Receiver();
-            foreach (KeyValuePair<string, int> daznis in receiver.Dazniai)
-            {
-                textBox1.AppendText(daznis.Value + " " + daznis.Key + Environment.NewLine);
-            }
+            Receiver receiver = new Receiver(ref PriiemimoEile);
         }
 
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        
+        private void update_textbox_contents()
+        {
+            foreach (Dictionary<string, int> Dazniai in PriiemimoEile.GetConsumingEnumerable())
+            {
+                foreach(KeyValuePair<string, int> daznis in Dazniai)
+                {
+                    //Invoke paleidžia metodą ne per šį thread, o per UI threadą (pagrindinį)
+                    textBox1.Invoke((MethodInvoker)delegate {
+                        textBox1.AppendText(daznis.Value + " " + daznis.Key + Environment.NewLine);
+                    });
+                }
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -46,7 +59,7 @@ namespace Receiver_master_GUI
                         FileName = agentoProgramosKelias,
                         Arguments = $"\"{katalogoKelias}\"",//Šito reikia, kad kelias nebūtų suskaldytas į kelis string[] elementus, jei yra tarpų
                         UseShellExecute = false
-                    };
+                    };  
                     MessageBox.Show("Pradetas procesas su keliu: " + startInfo.Arguments);
                     using (Process process = Process.Start(startInfo))
                     {
