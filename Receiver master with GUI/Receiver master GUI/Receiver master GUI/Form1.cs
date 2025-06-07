@@ -6,13 +6,16 @@ namespace Receiver_master_GUI
 {
     public partial class Form1 : Form
     {
-        private BlockingCollection<Dictionary<string, int>> PriiemimoEile;
+        private BlockingCollection<Dictionary<string, int>> PriiemimoEile, AtnaujinimoEile;
         public Form1()
         {
-            PriiemimoEile = new BlockingCollection<Dictionary<string, int>>();
+            PriiemimoEile = new BlockingCollection<Dictionary<string, int>>();//Receiver objektams perduoti informaciją į DictionaryJoiner
+            AtnaujinimoEile = new BlockingCollection<Dictionary<string, int>>();//DictionaryJoiner perduoti informaciją į Textbox atnaujinimo funkciją
             InitializeComponent();
             Task atnaujintiTextbox = Task.Run(() => update_textbox_contents());
-        }
+            DictionaryJoiner DictionaryJoiner = new DictionaryJoiner();
+            Task jungtiDictionaries = Task.Run(() => DictionaryJoiner.IjungtiDictionaryJoiner(PriiemimoEile, AtnaujinimoEile));
+        } 
 
         private void GetInputFromPipe()
         {
@@ -27,15 +30,18 @@ namespace Receiver_master_GUI
         
         private void update_textbox_contents()
         {
-            foreach (Dictionary<string, int> Dazniai in PriiemimoEile.GetConsumingEnumerable())
+            foreach (Dictionary<string, int> Dazniai in AtnaujinimoEile.GetConsumingEnumerable())
             {
+                string NaujasTekstas = "";
+                ;
                 foreach(KeyValuePair<string, int> daznis in Dazniai)
                 {
-                    //Invoke paleidžia metodą ne per šį thread, o per UI threadą (pagrindinį)
-                    textBox1.Invoke((MethodInvoker)delegate {
-                        textBox1.AppendText(daznis.Value + " " + daznis.Key + Environment.NewLine);
-                    });
+                    NaujasTekstas += (daznis.Value + " " + daznis.Key + Environment.NewLine);
                 }
+                //Invoke paleidžia metodą ne per šį thread, o per UI threadą (pagrindinį)
+                textBox1.Invoke((MethodInvoker)delegate {
+                    textBox1.Text = NaujasTekstas;
+                });
             }
         }
 
