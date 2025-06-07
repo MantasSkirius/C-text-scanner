@@ -18,9 +18,9 @@ namespace Scanner_App
         public List<Failas> Failai;
         public BlockingCollection<Dictionary<string, int>> SiuntimoEile;
 
-        public void FailuSiuntimas()
+        public void FailuSiuntimas(string PipeName)
         {
-            var client = new NamedPipeClientStream(".", "dazniuSiuntimoVamzdis", PipeDirection.Out);
+            var client = new NamedPipeClientStream(".", PipeName, PipeDirection.Out);
             client.Connect();
             var writer = new StreamWriter(client) { AutoFlush = true };
             foreach (Dictionary<string, int>Dazniai in SiuntimoEile.GetConsumingEnumerable())
@@ -39,20 +39,20 @@ namespace Scanner_App
             }
             SiuntimoEile.CompleteAdding();
         }
-        public Agentas(string katalogo_kelias, string search_pattern) {
+        public Agentas(string katalogo_kelias, string search_pattern, string PipeName) {
             SiuntimoEile = new BlockingCollection<Dictionary<string, int>>();
             Failai = new List<Failas>();
 
             Console.WriteLine(katalogo_kelias);
             Console.WriteLine(search_pattern);
             string[] filePaths;
+            Console.WriteLine("Katalogo kelias: " + katalogo_kelias + " vambzdžio vardas: " + PipeName);
             try {
                 filePaths = Directory.GetFiles(katalogo_kelias, search_pattern, SearchOption.AllDirectories);
             }
             catch
             {
                 Console.WriteLine("Katalogas nerastas arba netinkamas kelias.");
-                Console.WriteLine("Katalogo kelias: " + katalogo_kelias);
                 while (true) { }
             }
             
@@ -63,7 +63,7 @@ namespace Scanner_App
                 Console.WriteLine(imagePath);
             }
             
-            Task siuntimoTask = Task.Run(() => FailuSiuntimas());
+            Task siuntimoTask = Task.Run(() => FailuSiuntimas(PipeName));
             Task skaitymoTask = Task.Run(() => FailuSkaitymas());
             Task.WaitAll(siuntimoTask, skaitymoTask);
         }

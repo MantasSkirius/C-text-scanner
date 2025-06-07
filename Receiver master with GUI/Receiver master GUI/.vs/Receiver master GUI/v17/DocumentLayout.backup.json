@@ -34,9 +34,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\Form1.cs",
               "RelativeDocumentMoniker": "Receiver master GUI\\Form1.cs",
-              "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\Form1.cs*",
-              "RelativeToolTip": "Receiver master GUI\\Form1.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
+              "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\Form1.cs",
+              "RelativeToolTip": "Receiver master GUI\\Form1.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwEQAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T14:10:35.307Z",
               "EditorCaption": ""
@@ -62,7 +62,8 @@
               "RelativeToolTip": "Receiver master GUI\\DictionaryJoiner.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T07:56:54.001Z"
+              "WhenOpened": "2025-06-07T07:56:54.001Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,9 +73,10 @@
               "RelativeDocumentMoniker": "Receiver master GUI\\Receiver.cs",
               "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\Receiver.cs",
               "RelativeToolTip": "Receiver master GUI\\Receiver.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T10:28:26.984Z"
+              "WhenOpened": "2025-06-05T10:28:26.984Z",
+              "EditorCaption": ""
             }
           ]
         }

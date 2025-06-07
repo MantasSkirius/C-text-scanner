@@ -28,9 +28,9 @@ namespace Receiver_master_GUI
             Task jungtiDictionaries = Task.Run(() => DictionaryJoiner.IjungtiDictionaryJoiner(PriiemimoEile, AtnaujinimoEile));
         } 
 
-        private void GetInputFromPipe()
+        private void GetInputFromPipe(string PipeName)
         {
-            Receiver receiver = new Receiver(ref PriiemimoEile);
+            Receiver receiver = new Receiver(ref PriiemimoEile, PipeName);
         }
 
 
@@ -68,7 +68,7 @@ namespace Receiver_master_GUI
             };
             MessageBox.Show("Pradetas procesas su keliu: " + startInfo.Arguments);
             Process process = Process.Start(startInfo);
-            Task getInputFromPipe = Task.Run(() => GetInputFromPipe());
+            Task getInputFromPipe = Task.Run(() => GetInputFromPipe(PipeName));
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -78,6 +78,7 @@ namespace Receiver_master_GUI
                 folderDialog.Description = "Pasirinkite kataloga, iš kurio bus skanuojami .txt failai: ";
                 if (folderDialog.ShowDialog(this) == DialogResult.OK)
                 {
+                    button1.Enabled = false;//išjungiu mygtuką, kad vartotojas vėl nespaustų
                     MessageBox.Show("Pasirinktas katalogas: " + folderDialog.SelectedPath);
                     MessageBox.Show("Agento programos kelias: " + agentoProgramosKelias);
                     callScannerProcess(ScannerCoreNumber, folderDialog.SelectedPath, ("dazniuSiuntimoVamzdis"+ScannerCoreNumber));

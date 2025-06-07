@@ -21,9 +21,9 @@ namespace Receiver_master_GUI
             return Dazniai;
         }
 
-        public Receiver(ref BlockingCollection<Dictionary<string, int>> PriiemimoEile)
+        public Receiver(ref BlockingCollection<Dictionary<string, int>> PriiemimoEile, string PipeName)
         {
-            using var server = new NamedPipeServerStream("dazniuSiuntimoVamzdis", PipeDirection.In);
+            using var server = new NamedPipeServerStream(PipeName, PipeDirection.In);
             MessageBox.Show("Waiting for agent to connect...");
             server.WaitForConnection();
             using var reader = new StreamReader(server);
