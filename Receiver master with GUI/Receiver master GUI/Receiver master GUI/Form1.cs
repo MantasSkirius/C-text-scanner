@@ -11,6 +11,15 @@ namespace Receiver_master_GUI
         private int ScannerCoreNumber = 2;//Pirmas core - Receiver, todėl pradedama nuo antrojo
         public Form1()
         {
+            try
+            {
+                Process currentProcess = Process.GetCurrentProcess();
+                currentProcess.ProcessorAffinity = (IntPtr)(int)Math.Pow(2, 0);
+            }
+            catch
+            {
+                MessageBox.Show("Nepavyko priskirti branduolio");
+            }
             PriiemimoEile = new BlockingCollection<Dictionary<string, int>>();//Receiver objektams perduoti informaciją į DictionaryJoiner
             AtnaujinimoEile = new BlockingCollection<Dictionary<string, int>>();//DictionaryJoiner perduoti informaciją į Textbox atnaujinimo funkciją
             InitializeComponent();

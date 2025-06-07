@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,12 @@ namespace Scanner_App
             int ScannerCoreNumber = 2;
             string search_pattern = "*.txt";
             string PipeName = "dazniuSiuntimoVamzdis2";
+            //Dictionary<int, int> intToCore = new Dictionary<int, int>
+            //{
+            //    {2,0x2},
+            //    {3,0x4},
+            //    {4,0x8}
+            //};
             if (argumentai.Length == 3 && argumentai != null)
             {
                 Katalogo_kelias = argumentai[0];
@@ -29,10 +36,19 @@ namespace Scanner_App
             {
                 Console.WriteLine("Katalogo kelias nenurodytas, naudojamas numatytasis katalogas.");
             }
-            foreach (string katalogo_kels in argumentai)
-            {
-                Console.WriteLine("Argumentu spausdinimas: " + katalogo_kels);
+            try {
+                Process currentProcess = Process.GetCurrentProcess();
+                //currentProcess.ProcessorAffinity = (IntPtr)intToCore[ScannerCoreNumber];
+                currentProcess.ProcessorAffinity = (IntPtr)(int)Math.Pow(2, ScannerCoreNumber);
             }
+            catch {
+                Console.WriteLine("Nepavyko priskirti branduolio");
+                while (true) { }
+            }
+
+
+
+
             Console.WriteLine(Katalogo_kelias);
             Console.WriteLine("Katalogo kelias su kuriuo kuriamas agentas: " + Katalogo_kelias);
             Agentas agent = new Agentas(Katalogo_kelias, search_pattern);
