@@ -10,7 +10,7 @@ namespace Scanner_App
     {
         static public string[] Tokenizuoti(string teksas)
         {
-            char[] Skyriklis = new char[] { ' ', ',', '.', '!', ':', ';', '?', '\'', '"', '\n', '\r', '\t', ')', '('};
+            char[] Skyriklis = new char[] { ' ', ',', '.', '!', ':', ';', '?', '\'', '/', '"', '\n', '\r', '\t', ')', '('};
             string[] zodziai = teksas.Split(Skyriklis, StringSplitOptions.RemoveEmptyEntries).Select(word => word.Trim()).ToArray();
             return zodziai;
         }

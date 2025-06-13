@@ -35,13 +35,6 @@ namespace Receiver_master_GUI
             Receiver receiver = new Receiver(ref PriiemimoEile, PipeName);
         }
 
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-    
-
         private void update_gridView_contents()
         {
             foreach (List<KeyValuePair<string, int>> Dazniai in AtnaujinimoEile.GetConsumingEnumerable())
@@ -99,9 +92,5 @@ namespace Receiver_master_GUI
             folderDialog_and_AgentCreation();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

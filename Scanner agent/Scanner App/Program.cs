@@ -15,6 +15,7 @@ namespace Scanner_App
         {
             //Argumentu formatas:  $"\"{katalogoKelias}\" {coreNumberString} \"{PipeName}\
             //Šitos dalies su Katalogo kelių masyvu reikia, nes kompiliatorius tikisi matyti string[] Main metodo argumentuose.
+            //Default parametrai:
             string Katalogo_kelias = @"..\..\..\..\..\..\Tekstai skaitymui";
             int ScannerCoreNumber = 2;
             string search_pattern = "*.txt";

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Receiver master GUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10cf3d2a0f3886c5bf7123228aa59118ebd45c31")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+405dde4a8abe5c400ef89a59c6d4d04e53deec12")]
 [assembly: System.Reflection.AssemblyProductAttribute("Receiver master GUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Receiver master GUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
