@@ -18,14 +18,14 @@ namespace Receiver_master_GUI
             //Prie MasterDictionary Prideda visus AdditionalDict žodžius.
             foreach (KeyValuePair<string, int> zodis in AdditionalDict)
             {
-                tikrinamasZodis = zodis.key.ToLower();
+                string tikrinamasZodis = zodis.Key.ToLower();
                 if (MasterDictionary.ContainsKey(zodis.Key))
                 {
-                    MasterDictionary[zodis.Key] += tikrinamasZodis;
+                    MasterDictionary[tikrinamasZodis] += zodis.Value;
                 }
                 else
                 {
-                    MasterDictionary[zodis.Key] = tikrinamasZodis;
+                    MasterDictionary[tikrinamasZodis] = zodis.Value;
                 }
             }
         }
