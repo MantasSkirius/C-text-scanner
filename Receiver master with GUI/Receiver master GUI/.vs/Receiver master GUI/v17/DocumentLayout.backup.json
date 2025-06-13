@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|d:\\aaa programavimas\\c# namu darbas\\receiver master with gui\\receiver master gui\\receiver master gui\\dictionaryjoiner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|solutionrelative:receiver master gui\\dictionaryjoiner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|d:\\aaa programavimas\\c# namu darbas\\receiver master with gui\\receiver master gui\\receiver master gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|solutionrelative:receiver master gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|d:\\aaa programavimas\\c# namu darbas\\receiver master with gui\\receiver master gui\\receiver master gui\\receiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|solutionrelative:receiver master gui\\receiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\receiver master gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|solutionrelative:receiver master gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|d:\\aaa programavimas\\c# namu darbas\\receiver master with gui\\receiver master gui\\receiver master gui\\dictionaryjoiner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|solutionrelative:receiver master gui\\dictionaryjoiner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|d:\\aaa programavimas\\c# namu darbas\\receiver master with gui\\receiver master gui\\receiver master gui\\receiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B69B545A-223F-4C17-8A6F-B4D8D9A370FA}|Receiver master GUI\\Receiver master GUI.csproj|solutionrelative:receiver master gui\\receiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,48 +26,53 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\Form1.cs",
               "RelativeDocumentMoniker": "Receiver master GUI\\Form1.cs",
               "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\Form1.cs",
               "RelativeToolTip": "Receiver master GUI\\Form1.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAgwC8AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAQwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T14:10:35.307Z",
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\Form1.cs",
               "RelativeDocumentMoniker": "Receiver master GUI\\Form1.cs",
               "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\Form1.cs [Design]",
               "RelativeToolTip": "Receiver master GUI\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T08:08:05.977Z"
+              "WhenOpened": "2025-06-07T08:08:05.977Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "DictionaryJoiner.cs",
               "DocumentMoniker": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\DictionaryJoiner.cs",
               "RelativeDocumentMoniker": "Receiver master GUI\\DictionaryJoiner.cs",
-              "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\DictionaryJoiner.cs*",
-              "RelativeToolTip": "Receiver master GUI\\DictionaryJoiner.cs*",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAB0AAAANAAAAAAAAAA==",
+              "ToolTip": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\DictionaryJoiner.cs",
+              "RelativeToolTip": "Receiver master GUI\\DictionaryJoiner.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwBgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T07:56:54.001Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Receiver.cs",
               "DocumentMoniker": "D:\\AAA PROGRAMAVIMAS\\C# namu darbas\\Receiver master with GUI\\Receiver master GUI\\Receiver master GUI\\Receiver.cs",
               "RelativeDocumentMoniker": "Receiver master GUI\\Receiver.cs",

@@ -25,7 +25,7 @@ namespace Receiver_master_GUI
             PriiemimoEile = new BlockingCollection<Dictionary<string, int>>();//Receiver objektams perduoti informaciją į DictionaryJoiner
             AtnaujinimoEile = new BlockingCollection<List<KeyValuePair<string, int>>>();//DictionaryJoiner perduoti informaciją į Textbox atnaujinimo funkciją
             InitializeComponent();
-            Task atnaujintiTextbox = Task.Run(() => update_textbox_contents());
+            Task atnaujintiTextbox = Task.Run(() => update_gridView_contents());
             DictionaryJoiner DictionaryJoiner = new DictionaryJoiner();
             Task jungtiDictionaries = Task.Run(() => DictionaryJoiner.IjungtiDictionaryJoiner(PriiemimoEile, AtnaujinimoEile));
         }
@@ -40,21 +40,18 @@ namespace Receiver_master_GUI
         {
 
         }
+    
 
-        private void update_textbox_contents()
+        private void update_gridView_contents()
         {
             foreach (List<KeyValuePair<string, int>> Dazniai in AtnaujinimoEile.GetConsumingEnumerable())
             {
-                string NaujasTekstas = "";
-                MessageBox.Show("Rikiuotas rezultatas: " + JsonConvert.SerializeObject(Dazniai));
-                foreach (KeyValuePair<string, int> daznis in Dazniai)
-                {
-                    NaujasTekstas += (daznis.Value + " " + daznis.Key + Environment.NewLine);
-                }
                 //Invoke paleidžia metodą ne per šį thread, o per UI thread (pagrindinį)
-                textBox1.Invoke((MethodInvoker)delegate
+                dataGridView1.Invoke((MethodInvoker)delegate
                 {
-                    textBox1.Text = NaujasTekstas;
+                    dataGridView1.DataSource = Dazniai;
+                    dataGridView1.Columns[0].HeaderText = "Žodis";
+                    dataGridView1.Columns[1].HeaderText = "Dažnis";
                 });
             }
         }
@@ -81,7 +78,7 @@ namespace Receiver_master_GUI
                 folderDialog.Description = "Pasirinkite kataloga, iš kurio bus skanuojami .txt failai: ";
                 if (folderDialog.ShowDialog(this) == DialogResult.OK)
                 {
-                   
+
                     MessageBox.Show("Pasirinktas katalogas: " + folderDialog.SelectedPath);
                     MessageBox.Show("Agento programos kelias: " + agentoProgramosKelias);
                     callScannerProcess(ScannerCoreNumber, folderDialog.SelectedPath, ("dazniuSiuntimoVamzdis" + ScannerCoreNumber));
@@ -100,6 +97,11 @@ namespace Receiver_master_GUI
         {
             button2.Enabled = false;//išjungiu mygtuką, kad vartotojas vėl nespaustų
             folderDialog_and_AgentCreation();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
