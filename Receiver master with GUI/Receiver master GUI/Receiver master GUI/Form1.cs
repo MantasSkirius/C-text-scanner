@@ -1,4 +1,5 @@
-﻿using System.Collections.Concurrent;
+﻿using Newtonsoft.Json;
+using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -6,7 +7,8 @@ namespace Receiver_master_GUI
 {
     public partial class Form1 : Form
     {
-        private BlockingCollection<Dictionary<string, int>> PriiemimoEile, AtnaujinimoEile;
+        private BlockingCollection<Dictionary<string, int>> PriiemimoEile;
+        private BlockingCollection<List<KeyValuePair<string, int>>> AtnaujinimoEile;
         private string agentoProgramosKelias = @"..\..\..\..\..\..\Scanner agent\Scanner App\bin\Debug\Scanner App.exe";
         private int ScannerCoreNumber = 2;//Pirmas core - Receiver, todėl pradedama nuo antrojo
         public Form1()
@@ -21,7 +23,7 @@ namespace Receiver_master_GUI
                 MessageBox.Show("Nepavyko priskirti branduolio");
             }
             PriiemimoEile = new BlockingCollection<Dictionary<string, int>>();//Receiver objektams perduoti informaciją į DictionaryJoiner
-            AtnaujinimoEile = new BlockingCollection<Dictionary<string, int>>();//DictionaryJoiner perduoti informaciją į Textbox atnaujinimo funkciją
+            AtnaujinimoEile = new BlockingCollection<List<KeyValuePair<string, int>>>();//DictionaryJoiner perduoti informaciją į Textbox atnaujinimo funkciją
             InitializeComponent();
             Task atnaujintiTextbox = Task.Run(() => update_textbox_contents());
             DictionaryJoiner DictionaryJoiner = new DictionaryJoiner();
@@ -41,15 +43,15 @@ namespace Receiver_master_GUI
 
         private void update_textbox_contents()
         {
-            foreach (Dictionary<string, int> Dazniai in AtnaujinimoEile.GetConsumingEnumerable())
+            foreach (List<KeyValuePair<string, int>> Dazniai in AtnaujinimoEile.GetConsumingEnumerable())
             {
                 string NaujasTekstas = "";
-                ;
+                MessageBox.Show("Rikiuotas rezultatas: " + JsonConvert.SerializeObject(Dazniai));
                 foreach (KeyValuePair<string, int> daznis in Dazniai)
                 {
                     NaujasTekstas += (daznis.Value + " " + daznis.Key + Environment.NewLine);
                 }
-                //Invoke paleidžia metodą ne per šį thread, o per UI threadą (pagrindinį)
+                //Invoke paleidžia metodą ne per šį thread, o per UI thread (pagrindinį)
                 textBox1.Invoke((MethodInvoker)delegate
                 {
                     textBox1.Text = NaujasTekstas;

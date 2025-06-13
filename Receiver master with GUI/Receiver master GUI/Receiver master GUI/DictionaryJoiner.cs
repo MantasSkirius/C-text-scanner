@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Receiver_master_GUI
     internal class DictionaryJoiner
     {
         public Dictionary<string, int> MasterDictionary;
-
+        
         private void JoinDictionaries(Dictionary<string, int> AdditionalDict)
         {
             //Prie MasterDictionary Prideda visus AdditionalDict žodžius.
@@ -27,13 +28,21 @@ namespace Receiver_master_GUI
                 }
             }
         }
-        public void IjungtiDictionaryJoiner(BlockingCollection<Dictionary<string, int>> PriiemimoEile, BlockingCollection<Dictionary<string, int>> AtnaujinimoEile)
+
+        private List<KeyValuePair<string, int>> SortMasterDictionaryByValue()
+        {
+            //Privalau pakeistį į masyvą, kad galėčiau surikiuoti pagal dažnį.
+            List<KeyValuePair<string, int>> rikiuotiDazniai = MasterDictionary.ToList();
+            rikiuotiDazniai = rikiuotiDazniai.OrderByDescending(daznis => daznis.Value).ToList();
+            return rikiuotiDazniai;
+        }
+        public void IjungtiDictionaryJoiner(BlockingCollection<Dictionary<string, int>> PriiemimoEile, BlockingCollection<List<KeyValuePair<string, int>>> AtnaujinimoEile)
         {
             MasterDictionary = new Dictionary<string, int>();
             foreach (Dictionary<string, int> Dictionary in PriiemimoEile.GetConsumingEnumerable())
             {
                 JoinDictionaries(Dictionary);
-                AtnaujinimoEile.Add(MasterDictionary);
+                AtnaujinimoEile.Add(SortMasterDictionaryByValue());
             }
         }
     }

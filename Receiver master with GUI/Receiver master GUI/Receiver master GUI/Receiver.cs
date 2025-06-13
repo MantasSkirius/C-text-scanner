@@ -13,7 +13,7 @@ namespace Receiver_master_GUI
 {
     internal class Receiver
     {
-    //Šitos klasės darbas - kai pakviečiama - klausytis Pipe ir gautą json paversti į Dictionarį ir idėtį į Priiemimo eilę.
+    //Kai pakviečiama - klausytis Pipe ir gautą json paversti į Dictionarį ir idėtį į Priiemimo eilę.
         private Dictionary<string, int> JsonToDictionary(string zinute)
         {
             Dictionary<string, int> Dazniai;
