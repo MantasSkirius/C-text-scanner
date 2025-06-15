@@ -64,32 +64,40 @@ namespace Receiver_master_GUI
             Task getInputFromPipe = Task.Run(() => GetInputFromPipe(PipeName));
         }
 
-        private void folderDialog_and_AgentCreation()
+        private bool ShowFolderDialog_and_CreateAgent()
         {
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
                 folderDialog.Description = "Pasirinkite kataloga, iš kurio bus skanuojami .txt failai: ";
                 if (folderDialog.ShowDialog(this) == DialogResult.OK)
-                {
-
+                { 
                     MessageBox.Show("Pasirinktas katalogas: " + folderDialog.SelectedPath);
                     MessageBox.Show("Agento programos kelias: " + agentoProgramosKelias);
                     callScannerProcess(ScannerCoreNumber, folderDialog.SelectedPath, ("dazniuSiuntimoVamzdis" + ScannerCoreNumber));
                     ScannerCoreNumber++;
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            button1.Enabled = false;//išjungiu mygtuką, kad vartotojas vėl nespaustų
-            folderDialog_and_AgentCreation();
+            if (ShowFolderDialog_and_CreateAgent())
+            {
+                button1.Enabled = false;//išjungiu mygtuką, kad vartotojas vėl nespaustų
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            button2.Enabled = false;//išjungiu mygtuką, kad vartotojas vėl nespaustų
-            folderDialog_and_AgentCreation();
+            if (ShowFolderDialog_and_CreateAgent())
+            {
+                button2.Enabled = false;//išjungiu mygtuką, kad vartotojas vėl nespaustų
+            }
         }
 
     }
