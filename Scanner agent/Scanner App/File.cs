@@ -9,7 +9,7 @@ namespace Scanner_App
 {
     internal class Failas
     {
-        private string failo_kelias;
+        public string failo_kelias;
         public Failas(string path)
         {
             failo_kelias = path;

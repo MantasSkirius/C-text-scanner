@@ -56,8 +56,8 @@ namespace Receiver_master_GUI
                 FileName = agentoProgramosKelias,
                 Arguments = $"\"{katalogoKelias}\" {coreNumberString} \"{PipeName}\"",//Šito reikia, kad kelias nebūtų suskaldytas į kelis string[] elementus, jei yra tarpų,
                 //Tarp kintamųjų Arguments turi būti vienas tarpas
-                UseShellExecute = false,
-                CreateNoWindow = true//Išjungiau receiver konsolės langą, kad nereikėtų jame spausti enter, kad testų skenavimą.
+                //CreateNoWindow = true,//Išjungiau receiver konsolės langą, kad nereikėtų jame spausti enter, kad testų skenavimą.
+                UseShellExecute = false
             };
             MessageBox.Show("Pradetas procesas su keliu: " + startInfo.Arguments);
             Process process = Process.Start(startInfo);

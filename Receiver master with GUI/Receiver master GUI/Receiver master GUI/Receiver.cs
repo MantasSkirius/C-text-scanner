@@ -16,9 +16,9 @@ namespace Receiver_master_GUI
     //Kai pakviečiama - klausytis Pipe ir gautą json paversti į Dictionarį ir idėtį į Priiemimo eilę.
         private Dictionary<string, int> JsonToDictionary(string zinute)
         {
-            Dictionary<string, int> Dazniai;
-            Dazniai = JsonConvert.DeserializeObject<Dictionary<string, int>>(zinute);
-            return Dazniai;
+            Tuple<String, Dictionary<string, int>> Dazniai;
+            Dazniai = JsonConvert.DeserializeObject<Tuple<String, Dictionary<string, int>>>(zinute);
+            return Dazniai.Item2;
         }
 
         public Receiver(ref BlockingCollection<Dictionary<string, int>> PriiemimoEile, string PipeName)

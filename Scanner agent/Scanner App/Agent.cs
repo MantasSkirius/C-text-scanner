@@ -16,14 +16,14 @@ namespace Scanner_App
 
         public string[] failu_keliai;
         public List<Failas> Failai;
-        public BlockingCollection<Dictionary<string, int>> SiuntimoEile;
+        public BlockingCollection<Tuple<String, Dictionary<string, int>>> SiuntimoEile;
 
         public void FailuSiuntimas(string PipeName)
         {
             var client = new NamedPipeClientStream(".", PipeName, PipeDirection.Out);
             client.Connect();
             var writer = new StreamWriter(client) { AutoFlush = true };
-            foreach (Dictionary<string, int>Dazniai in SiuntimoEile.GetConsumingEnumerable())
+            foreach (Tuple<String, Dictionary<string, int>>Dazniai in SiuntimoEile.GetConsumingEnumerable())
             {
                 string jsonDazniai = JsonConvert.SerializeObject(Dazniai);
                 Console.WriteLine(jsonDazniai);
@@ -35,12 +35,13 @@ namespace Scanner_App
         {
             foreach (Failas failas in Failai)
             {
-                SiuntimoEile.Add(failas.SkaiciuotiZodzius());
+                Tuple<string, Dictionary<string, int>> SiunciamasTurinys = new Tuple<string, Dictionary<string, int>>(failas.failo_kelias, failas.SkaiciuotiZodzius());
+                SiuntimoEile.Add(SiunciamasTurinys);
             }
             SiuntimoEile.CompleteAdding();
         }
         public Agentas(string katalogo_kelias, string search_pattern, string PipeName) {
-            SiuntimoEile = new BlockingCollection<Dictionary<string, int>>();
+            SiuntimoEile = new BlockingCollection<Tuple<string, Dictionary<string, int>>>();
             Failai = new List<Failas>();
 
             Console.WriteLine(katalogo_kelias);
