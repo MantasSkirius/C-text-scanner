@@ -13,7 +13,7 @@ namespace Receiver_master_GUI
     {
         public Dictionary<string, int> MasterDictionary;
         
-        private void JoinDictionaries(Dictionary<string, int> AdditionalDict)
+        protected void JoinDictionaries(Dictionary<string, int> AdditionalDict)
         {
             //Prie MasterDictionary Prideda visus AdditionalDict žodžius.
             foreach (KeyValuePair<string, int> zodis in AdditionalDict)
@@ -30,14 +30,14 @@ namespace Receiver_master_GUI
             }
         }
 
-        private List<KeyValuePair<string, int>> SortMasterDictionaryByValue()
+        protected List<KeyValuePair<string, int>> SortMasterDictionaryByValue(Dictionary<string, int> RikiuojamasDictionary)
         {
             //Privalau pakeistį į masyvą, kad galėčiau surikiuoti pagal dažnį.
-            List<KeyValuePair<string, int>> rikiuotiDazniai = MasterDictionary.ToList();
+            List<KeyValuePair<string, int>> rikiuotiDazniai = RikiuojamasDictionary.ToList();
             rikiuotiDazniai = rikiuotiDazniai.OrderByDescending(daznis => daznis.Value).ToList();
             return rikiuotiDazniai;
         }
-        public void IjungtiDictionaryJoiner(BlockingCollection<Dictionary<string, int>> PriiemimoEile, BlockingCollection<List<KeyValuePair<string, int>>> AtnaujinimoEile)
+        public virtual void IjungtiDictionaryJoiner(BlockingCollection<Dictionary<string, int>> PriiemimoEile, BlockingCollection<List<KeyValuePair<string, int>>> AtnaujinimoEile)
         {
             MasterDictionary = new Dictionary<string, int>();
             foreach (Dictionary<string, int> Dictionary in PriiemimoEile.GetConsumingEnumerable())
