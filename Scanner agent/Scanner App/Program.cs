@@ -40,9 +40,6 @@ namespace Scanner_App
                 while (true) { }
             }
 
-
-
-
             Console.WriteLine(Katalogo_kelias);
             Console.WriteLine("Katalogo kelias su kuriuo kuriamas agentas: " + Katalogo_kelias);
             Agentas agent = new Agentas(Katalogo_kelias, search_pattern, PipeName);

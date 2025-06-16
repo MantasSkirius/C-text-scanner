@@ -30,7 +30,7 @@ namespace Receiver_master_GUI
             }
         }
 
-        protected List<KeyValuePair<string, int>> SortMasterDictionaryByValue(Dictionary<string, int> RikiuojamasDictionary)
+        protected List<KeyValuePair<string, int>> SortDictionaryByValue(Dictionary<string, int> RikiuojamasDictionary)
         {
             //Privalau pakeistį į masyvą, kad galėčiau surikiuoti pagal dažnį.
             List<KeyValuePair<string, int>> rikiuotiDazniai = RikiuojamasDictionary.ToList();
@@ -43,7 +43,7 @@ namespace Receiver_master_GUI
             foreach (Dictionary<string, int> Dictionary in PriiemimoEile.GetConsumingEnumerable())
             {
                 JoinDictionaries(Dictionary);
-                AtnaujinimoEile.Add(SortMasterDictionaryByValue());
+                AtnaujinimoEile.Add(SortDictionaryByValue(MasterDictionary));
             }
         }
     }

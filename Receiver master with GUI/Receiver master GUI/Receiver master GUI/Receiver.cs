@@ -14,14 +14,14 @@ namespace Receiver_master_GUI
     internal class Receiver
     {
     //Kai pakviečiama - klausytis Pipe ir gautą json paversti į Dictionarį ir idėtį į Priiemimo eilę.
-        private Dictionary<string, int> JsonToDictionary(string zinute)
+        private Tuple<string, Dictionary<string, int>> JsonToDictionary(string zinute)
         {
-            Tuple<String, Dictionary<string, int>> Dazniai;
-            Dazniai = JsonConvert.DeserializeObject<Tuple<String, Dictionary<string, int>>>(zinute);
-            return Dazniai.Item2;
+            Tuple<string, Dictionary<string, int>> Dazniai;
+            Dazniai = JsonConvert.DeserializeObject<Tuple<string, Dictionary<string, int>>>(zinute);
+            return Dazniai;
         }
 
-        public Receiver(ref BlockingCollection<Dictionary<string, int>> PriiemimoEile, string PipeName)
+        public Receiver(ref BlockingCollection<Dictionary<string, int>> PriiemimoEile, ref BlockingCollection<Tuple<string, Dictionary<string, int>>> PriiemimoEile2, string PipeName)
         {
             using var server = new NamedPipeServerStream(PipeName, PipeDirection.In);
             MessageBox.Show("Waiting for agent to connect...");
@@ -32,7 +32,10 @@ namespace Receiver_master_GUI
             {
                 while ((message = reader.ReadLine()) != null)
                 {
-                    PriiemimoEile.Add(JsonToDictionary(message));
+                    Tuple<string, Dictionary<string, int>>ProcesuotaZinute = JsonToDictionary(message);
+                    PriiemimoEile.Add(ProcesuotaZinute.Item2);
+                    MessageBox.Show("Prie PriiemimoEiles2 pridėta");
+                    PriiemimoEile2.Add(ProcesuotaZinute);
                     MessageBox.Show("Received from agent: " + message);
                 }
             }

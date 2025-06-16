@@ -31,7 +31,9 @@
             button1 = new Button();
             button2 = new Button();
             dataGridView1 = new DataGridView();
+            dataGridView2 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -65,17 +67,27 @@
             dataGridView1.StandardTab = true;
             dataGridView1.TabIndex = 3;
             // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(355, 30);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(637, 395);
+            dataGridView2.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(754, 450);
+            ClientSize = new Size(1027, 450);
+            Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
@@ -83,5 +95,6 @@
         private Button button1;
         private Button button2;
         private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
     }
 }
